@@ -45,9 +45,9 @@ inputArea.addEventListener('keydown', (event)=>{
     if (event.code=='Enter' && inputArea.value.trim() != '') {
         const date = getDate()
         messages.innerHTML += `
-            <div class="message">
-            <div class="message__time">${date.hours}:${date.minutes}</div>
-            <div class="message__text">${inputArea.value}</div>
+            <div class="message message_client">
+                <div class="message__time">${date.hours}:${date.minutes}</div>
+                <div class="message__text">${inputArea.value}</div>
             </div>`
         inputArea.value = ''
         sendAnswer()
